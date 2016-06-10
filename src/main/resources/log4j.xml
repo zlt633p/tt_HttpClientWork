@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration>
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+		<!--  
+			<param name="ConversionPattern" value="%p [%d{HH:mm:ss:SSS}] %C{1}-%M(%L) | %m%n" />
+		-->
+			<param name="ConversionPattern" value="[%p] %d{ISO8601} [%t] %x %c %M - %m%n" />
+			
+		</layout>
+	</appender>
+	<root>
+		<priority value="INFO"></priority>
+		<appender-ref ref="STDOUT" />
+	</root>
+</log4j:configuration>

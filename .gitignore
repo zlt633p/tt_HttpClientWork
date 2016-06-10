@@ -1,0 +1,20 @@
+.DS_Store
+.project
+.pydevproject
+.classpath
+target
+.settings
+.springBeans
+zltutil_KillableFiles
+
+# Word temporary
+zdocs/~$*.doc*
+
+# Excel temporary
+zdocs/~$*.xls*
+
+# Excel Backup File
+zdocs/*.xlk
+
+# PowerPoint temporary
+zdocs/~$*.ppt*
