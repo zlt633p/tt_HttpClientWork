@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.log4j.Logger;
@@ -33,11 +34,11 @@ public class GitbubJsonSample {
 		
 		
 		
-		HttpGet httpGet = new HttpGet(urltext);
+		HttpPost httpMethod = new HttpPost(urltext);
 		
 		CloseableHttpResponse httpRes = null;
 		try {
-			httpRes = httpClient.execute(httpGet);
+			httpRes = httpClient.execute(httpMethod);
 			String resContent = HttpUtil.getHttpResponseContent(httpRes);			
 			logger.info(resContent);
 			
